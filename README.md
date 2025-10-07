@@ -1,70 +1,232 @@
-# Getting Started with Create React App
+# 🎵 Ongaku - Music Activity Planner
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<div align="center">
+  
+  **Feel the Music** | **音楽を感じる**
+  
+  [![React](https://img.shields.io/badge/React-18.2.0-61DAFB?style=for-the-badge&logo=react&logoColor=white)](https://reactjs.org/)
+  [![Framer Motion](https://img.shields.io/badge/Framer_Motion-10.16.0-FF0055?style=for-the-badge&logo=framer&logoColor=white)](https://www.framer.com/motion/)
+  
+  A bilingual, weather-aware music activity discovery platform that helps you find the perfect musical experiences based on real-time conditions.
 
-## Available Scripts
+  [Features](#-features) • [Installation](#-installation) • [Usage](#-usage) • [API](#-api)
 
-In the project directory, you can run:
+</div>
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## ✨ Features
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### 🌍 **Bilingual Support**
+- Seamless switching between English and Japanese
+- Complete UI translation
+- Native voice recognition for both languages
 
-### `npm test`
+### 🎤 **Voice-Powered Search**
+- Natural language voice input
+- Real-time speech recognition
+- Fallback to text input
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 🌤️ **Weather Integration**
+- Real-time weather data for major Japanese cities
+- "Best Weather" city recommendations
+- Weather-appropriate activity suggestions
 
-### `npm run build`
+### 🎭 **Smart Activity Discovery**
+- AI-powered activity recommendations
+- Personalized based on music preferences
+- Venue, playlist, shopping, and café suggestions
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 📅 **Itinerary Planning**
+- Multi-day trip planning (1-7 days)
+- Hour-by-hour scheduling
+- Weather-aware activity timing
+- Cost estimates and tips
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 🎨 **Beautiful UI/UX**
+- Professional dark/light mode
+- Smooth animations with Framer Motion
+- Responsive design for all devices
+- Minimal, modern aesthetic
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 🎵 **Music Genre Preferences**
+- Filter by Jazz, Rock, Pop, Classical, Electronic, Indie, Hip-Hop, Folk
+- Tailored recommendations based on taste
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 🚀 Quick Start
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Prerequisites
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- Node.js (v16 or higher)
+- npm or yarn
+- Backend API running
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Installation
 
-## Learn More
+```
+# Clone the repository
+git clone https://github.com/yourusername/ongaku-frontend.git
+cd ongaku-frontend
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+# Install dependencies
+npm install
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+# Create environment file
+cp .env.example .env
 
-### Code Splitting
+# Start development server
+npm start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+The app will open at `http://localhost:3000`
 
-### Analyzing the Bundle Size
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## 🔧 Configuration
 
-### Making a Progressive Web App
+### Environment Variables
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Create a `.env` file in the root directory:
 
-### Advanced Configuration
+```
+# API Configuration
+REACT_APP_API_URL=http://localhost:5000
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### Available Scripts
 
-### Deployment
+```
+# Development
+npm start          # Start dev server
+npm run build      # Production build
+npm test           # Run tests
+npm run eject      # Eject from Create React App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+# Linting
+npm run lint       # Check code quality
+npm run format     # Format code with Prettier
+```
 
-### `npm run build` fails to minify
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 📁 Project Structure
+
+```
+ongaku-frontend/
+├── public/
+│   ├── index.html
+│   ├── favicon.ico
+│   └── manifest.json
+├── src/
+│   ├── components/
+│   │   ├── ActivityCard.jsx
+│   │   ├── ActivityList.jsx
+│   │   ├── ChatMessage.jsx
+│   │   ├── CitySelector.jsx
+│   │   ├── EnhancedLoadingSpinner.jsx
+│   │   ├── ItineraryPlanner.jsx
+│   │   ├── LanguageToggle.jsx
+│   │   ├── LoadingSpinner.jsx
+│   │   ├── MusicPreferences.jsx
+│   │   ├── ThemeToggle.jsx
+│   │   ├── VoiceInput.jsx
+│   │   ├── WeatherDisplay.jsx
+│   │   └── WeatherSkeleton.jsx
+│   ├── hooks/
+│   │   ├── useLanguage.js
+│   │   ├── useSpeechRecognition.js
+│   │   └── useTheme.js
+│   ├── services/
+│   │   └── api.js
+│   ├── styles/
+│   │   ├── variables.css
+│   │   ├── App.css
+│   │   ├── animations.css
+│   │   └── [component].css
+│   ├── utils/
+│   │   └── constants.js
+│   ├── App.jsx
+│   └── index.js
+├── .env.example
+├── .gitignore
+├── package.json
+└── README.md
+```
+
+---
+
+## 🔌 API
+
+### Endpoints Used
+
+#### Weather
+```
+GET /api/weather?city={cityName}
+```
+
+#### Quick Suggestions
+```
+POST /api/suggest-quick
+Content-Type: application/json
+
+{
+  "user_query": "Jazz concerts this weekend",
+  "location": "Tokyo",
+  "preferences": ["jazz", "live"],
+  "language": "en"
+}
+```
+
+#### Itinerary
+```
+POST /api/itinerary
+Content-Type: application/json
+
+{
+  "location": "Tokyo",
+  "duration_days": 3,
+  "preferences": ["jazz", "classical"],
+  "user_query": "Music lover's trip",
+  "language": "en"
+}
+```
+
+---
+
+## 🎨 Theme Customization
+
+Ongaku uses CSS variables for easy theming. Edit `src/styles/variables.css`:
+
+```
+:root {
+  --color-primary-500: #22c55e;  /* Main brand color */
+  --color-accent: #16a34a;        /* Accent color */
+  /* ... more variables */
+}
+
+[data-theme="dark"] {
+  --color-background: #1a1f2e;    /* Dark mode bg */
+  /* ... dark mode overrides */
+}
+```
+
+---
+
+## 🛠️ Tech Stack
+
+### Core
+- **React 18.2** - UI Framework
+- **Framer Motion 10.16** - Animation library
+- **Axios** - HTTP client
+
+### Development
+- **Create React App** - Build tooling
+- **ESLint** - Code linting
+- **Prettier** - Code formatting
+
+### APIs
+- Web Speech API (Voice recognition)
+- Weather API
+- Custom backend API
