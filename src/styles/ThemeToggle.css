@@ -1,0 +1,61 @@
+@import './variables.css';
+
+.theme-toggle {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+.toggle-track {
+  position: relative;
+  width: 56px;
+  height: 32px;
+  border-radius: var(--radius-full);
+  padding: 4px;
+  transition: background-color var(--transition-base);
+  border: 1px solid transparent;
+}
+
+.toggle-thumb {
+  width: 24px;
+  height: 24px;
+  background: white;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-sm);
+  transition: background-color var(--transition-fast);
+}
+
+.toggle-icon {
+  font-size: 0.875rem;
+  line-height: 1;
+}
+
+.theme-toggle:hover .toggle-track {
+  border-color: var(--color-border);
+}
+
+.theme-toggle:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+  border-radius: var(--radius-full);
+}
+
+/* Dark Mode Fixes */
+[data-theme="dark"] .toggle-track {
+  background-color: var(--color-surface) !important;
+  border-color: var(--color-border);
+}
+
+[data-theme="dark"] .toggle-thumb {
+  background: var(--color-surface-raised);
+}
+
+[data-theme="dark"] .theme-toggle:hover .toggle-track {
+  border-color: var(--color-accent);
+}
